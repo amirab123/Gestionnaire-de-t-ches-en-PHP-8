@@ -1,0 +1,116 @@
+body {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 2rem;
+    background-color: #e4faec;
+}
+
+h1 {
+    color: #333;
+}
+
+form input {
+    padding: 8px;
+    font-size: 16px;
+}
+
+
+/* ===== Formulaire ===== */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+form input[type="text"] {
+    flex: 1 1 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+form button {
+    flex: 1 1 100%;
+    padding: 12px;
+    background-color: #078c54;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+form button:hover {
+    background-color: #086337;
+}
+
+/* ===== Liste des tâches ===== */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    background-color: #ecf0f1;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+}
+
+li span {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* Tâche terminée barrée */
+li span.terminee {
+    text-decoration: line-through;
+    color: #7f8c8d;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.actions a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+.actions a:hover {
+    color: #e74c3c;
+}
+
+/* ===== Responsive pour tablette et plus grand ===== */
+@media screen and (min-width: 480px) {
+    form {
+        flex-wrap: nowrap;
+    }
+
+    form input[type="text"] {
+        flex: 1 1 auto;
+    }
+
+    form button {
+        flex: 0 0 auto;
+    }
+
+    li {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    li span {
+        margin-bottom: 0;
+    }
+}
